@@ -1,0 +1,25 @@
+page-frota {
+  agm-map {
+    height: 100%;
+  }
+
+  ion-header {
+    ion-navbar {
+      .toolbar-background {
+        background: linear-gradient(left, #313131, #b80000) !important;
+      }
+
+      label {
+        color: white;
+      }
+    }
+  }
+
+  ion-content {
+    ion-fab {
+      button {
+        background: linear-gradient(left, #313131, #b80000) !important;
+      }
+    }
+  }
+}

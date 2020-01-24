@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <img width="32" height="32" src="assets/imgs/logoLeft.png"/>
+            <label>Tracker Bus</label>
+        </ion-title>
+        <ion-buttons *ngIf="seguindoNome" right>
+            <button style="color: white" ion-button (click)="dejarDeSeguir()">
+                Limpar
+            </button>
+        </ion-buttons>
+        <ion-buttons *ngIf="!seguindoNome" right>
+            <button style="color: white" ion-button (click)="goToConf()">
+                <ion-icon size="large" name="settings"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-toolbar *ngIf="seguindoNome">
+        <ion-title>
+            <small *ngIf="seguindoNome">Seguindo: {{ seguindoNome }} - {{seguindoRota}}</small>
+            <br/><span *ngIf="seguindoNome"
+                       style="font-size: 12px"
+                       text-wrap> Ult. Atualização: {{seguindoData | date:'dd/MM/yyyy - HH:mm'}} </span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="14">
+        <agm-marker *ngFor="let frota of frotas" [latitude]="frota.lat" [longitude]="frota.lng"
+                    iconUrl="assets/imgs/busIcon2.png" (markerClick)="seguirButton( frota )">
+            <agm-info-window><strong>{{frota.nome}}</strong></agm-info-window>
+        </agm-marker>
+        <agm-marker [latitude]="user.lat" [longitude]="user.lng"
+                    iconUrl="assets/imgs/place.png">
+            <agm-info-window><strong>{{user.nome}}</strong></agm-info-window>
+        </agm-marker>
+        <agm-polyline [strokeColor]="'#2196f3'">
+            <agm-polyline-point *ngFor="let rt of rota" [latitude]="rt.lat" [longitude]="rt.lng"></agm-polyline-point>
+        </agm-polyline>
+    </agm-map>
+
+    <ion-fab left bottom>
+        <button ion-fab (click)="presentPopover($event)"><img src="assets/imgs/busIcon.png"/>
+        </button>
+    </ion-fab>
+</ion-content>

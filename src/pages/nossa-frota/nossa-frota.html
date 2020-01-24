@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="viewCtrl.dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Nossa Frota</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides loop="true" pager="true" autoplay="4000">
+    <ion-slide *ngIf="galeria!=null">
+      <img [src]="produto.foto | imagem" style="height:220px;">
+    </ion-slide>
+    <ion-slide *ngFor="let img_slide of galeria">
+      <img *ngIf="img_slide.foto!=null" [src]="img_slide.foto | imagem" style="height:220px;">
+    </ion-slide>
+  </ion-slides>
+</ion-content>
