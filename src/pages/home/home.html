@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar color="primary">
+
+        <ion-buttons>
+            <button ion-button (click)="salir()">
+          Sair
+        </button>
+        </ion-buttons>
+
+        <ion-title>
+            {{ user.nome }}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <agm-map [latitude]="user.lat" [longitude]="user.lng" [zoom]="16">
+        <agm-marker [latitude]="user.lat" [longitude]="user.lng" [title]="user.nome" (markerClick)="clickedMarker(user.nome)" iconUrl="assets/imgs/busIcon2.png">
+        <agm-info-window><strong>{{user.nome}}</strong></agm-info-window>
+        </agm-marker>
+    </agm-map>
+
+</ion-content>

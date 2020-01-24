@@ -1,0 +1,35 @@
+<ion-content padding>
+
+    <ion-slides pager>
+
+        <ion-slide>
+            <ion-toolbar>
+            </ion-toolbar>
+
+            <img src="assets/imgs/bus.jpg" class="slide-image"/>
+            <h2 class="slide-title">Informe seu Código!</h2>
+            <p>Deve informar o seu código de usuário.</p>
+
+            <button ion-button block (click)="mostrarInput()">
+                Acessar
+            </button>
+        </ion-slide>
+
+
+        <!-- Ultimo Slide -->
+        <ion-slide>
+            <ion-toolbar>
+            </ion-toolbar>
+
+            <img src="assets/imgs/check.jpg" class="slide-image"/>
+            <h2 class="slide-title">Pronto para começar?</h2>
+
+            <button ion-button large clear icon-right color="primary" (click)="ingresar()">
+                Continuar
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+        </ion-slide>
+
+    </ion-slides>
+
+</ion-content>
