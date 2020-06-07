@@ -5,7 +5,7 @@
 
 Aplicativo desenvolvido para acomanhamento em tempo real de veículos de uma empresa de frota de ônibus.
 
-### [APK DEMO](https://github.com/JulioNery/Tracker/blob/master/SansaoBus.apk)
+Este aplicativo usa os dados fornecidos pelo [Tracker Driver](https://github.com/julionery/ionic-firebase-tracker-driver), no qual os motoristas de ônibus enviam a sua localização em tempo real.
 
 ### :rocket: Tecnologias
  - [Ionic](https://ionicframework.com/)
@@ -14,6 +14,10 @@ Aplicativo desenvolvido para acomanhamento em tempo real de veículos de uma emp
 
 ### :earth_americas: Maps
  - [Maps](https://cloud.google.com/maps-platform/maps?hl=pt)
+
+<h3 align="center">
+  <a href="https://github.com/JulioNery/Tracker/blob/master/SansaoBus.apk">Aplicativo Demonstrativo - Android</a>
+</h3>
 
 <h2 align="center">Demonstração</h2>
 
