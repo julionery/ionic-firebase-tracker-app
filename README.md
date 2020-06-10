@@ -5,7 +5,7 @@
 
 Aplicativo desenvolvido para acomanhamento em tempo real de veículos de uma empresa de frota de ônibus.
 
-Este aplicativo usa os dados fornecidos pelo [Tracker Driver](https://github.com/julionery/ionic-firebase-tracker-driver), no qual os motoristas de ônibus enviam a sua localização em tempo real.
+Este aplicativo é gerenciado pelo [Painel Administrativo](https://github.com/julionery/angular-firebase-tracker-admin) e utiliza os dados fornecidos pelo [Tracker Driver](https://github.com/julionery/ionic-firebase-tracker-driver), no qual os motoristas de ônibus enviam a sua localização em tempo real.
 
 ### :rocket: Tecnologias
  - [Ionic](https://ionicframework.com/)
